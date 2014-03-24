@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>OneDesk GWT Client - Extensions module</name>
+	<groupId>com.onedesk.gwt</groupId>
+	<artifactId>extensions</artifactId>
+	<version>22054</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<version>2.5.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava-gwt</artifactId>
+                        <version>14.0.1</version>
+                </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<compileSourcesArtifacts>
+						<artifact>com.onedesk.gwt:extensions</artifact>
+					</compileSourcesArtifacts>
+				</configuration>
+			</plugin>
+	                <plugin>
+        	            <artifactId>maven-compiler-plugin</artifactId>
+                	    <version>2.5.1</version>
+	                    <configuration>
+        	                <source>1.6</source>
+	                        <target>1.6</target>
+                	    </configuration>
+	                </plugin>
+		</plugins>
+	</build>
+</project>
